@@ -1,5 +1,5 @@
 # P2P_chat
-watsapp like chat server runs on P2P Methodology
+Open-Source watsapp like chat server runs on P2P Methodology
 > - In initial phase
 > - Plan to Add signaling server
 > - Web based application
