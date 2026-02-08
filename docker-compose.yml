@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  p2p-chat:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+    restart: unless-stopped
+    volumes:
+      - ./public:/app/public
+    container_name: p2p-chat-server
