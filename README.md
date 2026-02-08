@@ -26,51 +26,165 @@ p2p-chat/
 ## 🛠️ Installation
 
 ### Prerequisites
-
 - Node.js 14.0.0 or higher
 - npm or yarn
+- Modern web browser (Chrome, Firefox, Safari, Edge)
 
-### Setup
-
-1. **Install dependencies:**
+### Installation
 
 ```bash
+# 1. Clone the repository
+git clone https://github.com/sudesh3107/P2P_chat
+cd P2P_chat
+
+# 2. Install dependencies
 npm install
-```
 
-2. **Start the signaling server:**
-
-```bash
+# 3. Start the server
 npm start
 ```
 
 The server will start on `http://localhost:3000`
 
-For development with auto-reload:
+### Alternative: Using Setup Script
 
 ```bash
+chmod +x setup.sh
+./setup.sh
+npm start
+```
+
+---
+
+## 💻 How to Use
+
+### Starting a Chat
+
+1. **Open the app** in your browser at `http://localhost:3000`
+
+2. **Enter your name** in the "Your Name" field
+
+3. **Create or enter a room code**
+   - Create: Choose any unique code (e.g., "team-meeting", "family-chat")
+   - Join: Enter the same code as your friend
+
+4. **Click "Connect"**
+
+5. **Share the room code** with others you want to chat with
+
+6. **Start messaging!** Type your message and press Enter or click Send
+
+### Making Voice Calls
+
+1. **Ensure you're connected** to a peer (status shows "Connected to peer")
+
+2. **Click the phone icon** 📞 in the top right
+
+3. **Grant microphone permission** when prompted by your browser
+
+4. **Wait for the other person to answer**
+
+5. **Talk freely** - your call is peer-to-peer encrypted!
+
+6. **Click the red phone icon** 📵 to end the call
+
+### Connecting from Other Devices
+
+**On the same network:**
+1. Find your computer's IP address:
+   - Windows: Open CMD and type `ipconfig`
+   - Mac/Linux: Open Terminal and type `ifconfig` or `ip addr`
+   - Look for your local IP (e.g., `192.168.1.100`)
+
+2. On other devices, change the server URL to:
+   ```
+   ws://192.168.1.100:3000
+   ```
+
+3. Enter the same room code and connect!
+
+
+## 📝 Usage Tips
+
+✅ **Room codes are case-sensitive** - "TeamChat" ≠ "teamchat"
+
+✅ **Use memorable codes** - "monday-standup" is better than "x7k2p"
+
+✅ **Microphone access required** - Grant permissions for voice calls
+
+✅ **Works on mobile** - Fully responsive design
+
+✅ **No registration needed** - Just enter a name and start chatting
+
+✅ **Private by default** - Messages are never stored on the server
+
+---
+
+## 🐳 Docker Installation (Alternative)
+
+```bash
+# Using Docker Compose
+docker-compose up -d
+
+# Or using Docker directly
+docker build -t p2p-chat .
+docker run -d -p 3000:3000 p2p-chat
+```
+
+Access at `http://localhost:3000`
+
+---
+
+## 🛠️ Development Mode
+
+```bash
+# Install dependencies
+npm install
+
+# Run with auto-reload (requires nodemon)
 npm run dev
 ```
 
-## 💻 Usage
+---
 
-### Local Testing
+## ⚙️ Configuration
 
-1. Start the signaling server (see above)
-2. Open your browser and go to `http://localhost:3000`
-3. Enter your name and create a room code
-4. Share the room code with others
-5. Others can join by entering the same room code
-6. Start chatting and making voice calls!
+### Change Server Port
 
-### Testing on Different Devices
+Edit `signaling-server.js` or set environment variable:
+```bash
+PORT=8080 npm start
+```
 
-1. Make sure all devices are on the same network
-2. Find your computer's local IP address:
-   - Windows: `ipconfig` (look for IPv4 Address)
-   - Mac/Linux: `ifconfig` or `ip addr` (look for inet)
-3. On other devices, connect to: `ws://YOUR_IP:3000` (e.g., `ws://192.168.1.100:3000`)
+### Update Server URL in Client
 
+For production, update the server URL in the client:
+1. Open `public/index.html`
+2. Find the server URL input field
+3. Change default value from `ws://localhost:3000` to your server URL
+
+Or users can manually enter the server URL in the UI.
+
+---
+
+## 🔍 Troubleshooting
+
+**Can't connect to server?**
+- Check if server is running: `npm start`
+- Verify the server URL is correct
+- Check firewall settings
+
+**Voice calls not working?**
+- Grant microphone permissions
+- Ensure both users are connected (green "Connected to peer" status)
+- Try refreshing the page
+
+**Messages not sending?**
+- Verify peer connection is established
+- Check browser console for errors (F12)
+- Make sure both users are in the same room
+
+For more help, see the full documentation in [README.md](README.md)
 ## 🌐 Deployment
 
 ### Deploy to Cloud Platform
