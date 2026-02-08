@@ -1,6 +1,6 @@
 # P2P Chat Application with Signaling Server
 
-A production-ready, WhatsApp-like peer-to-peer communication application with text chat and voice calling capabilities.
+A Open-Source, WhatsApp-like peer-to-peer communication application with text chat and voice calling capabilities.
 
 ## 🚀 Features
 
