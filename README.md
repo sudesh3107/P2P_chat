@@ -16,11 +16,11 @@ A Open-Source, WhatsApp-like peer-to-peer communication application with text ch
 
 ```
 p2p-chat/
-├── signaling-server.js    # WebSocket signaling server
-├── package.json            # Node.js dependencies
+├── signaling-server.js   
+├── package.json           
 ├── public/
-│   └── index.html         # Client application
-└── README.md              # This file
+│   └── index.html         
+└── README.md              
 ```
 
 ## 🛠️ Installation
@@ -184,7 +184,6 @@ Or users can manually enter the server URL in the UI.
 - Check browser console for errors (F12)
 - Make sure both users are in the same room
 
-For more help, see the full documentation in [README.md](README.md)
 ## 🌐 Deployment
 
 ### Deploy to Cloud Platform
@@ -407,4 +406,3 @@ pm2 start signaling-server.js --name p2p-chat
 
 ---
 
-**Need help?** Check the browser console for detailed error messages and connection logs.
