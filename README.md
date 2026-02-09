@@ -405,6 +405,7 @@ pm2 start signaling-server.js --name p2p-chat
 ```
 
 ---
-![Screenshot_2026-02-09-16-08-23-828_com brave browser](https://github.com/user-attachments/assets/38610829-7910-4c66-879a-74e67c2df737)
+
 <img width="1920" height="997" alt="Screenshot from 2026-02-09 16-09-06" src="https://github.com/user-attachments/assets/1c8a2916-46e9-4082-9b17-6ee42dc54ab0" />
 
+![IMG_20260209_162115](https://github.com/user-attachments/assets/713499b4-ea5b-4a58-bb45-c48134d41760)
